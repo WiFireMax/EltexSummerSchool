@@ -1,25 +1,37 @@
 CC=gcc
-SRC4=task1.c task2.c task3.c task4.c
-EXE4=task1 task2 task3 task4
 
-# Параметр t[N] - компиляция задач в отдельном задании N
-# Параметр d[N] - удаление исполняемых файлов задач в отдельном задании N
-.PHONY: all t% d%
+# Компиляция объектных файлов
+$(PRACTIKA)/%.o: $(PRACTIKA)/%.c
+	$(CC) -c $< -o $@
 
-PRACTIKA=Practika$*
+# Исполняемые файлы из объектных
+$(PRACTIKA)/%: $(PRACTIKA)/%.o
+	$(CC) $^ -o $@
 
-# Компиляция
+# Параметр t[N] - компиляция отдельного задания N
+# Параметр d[N] - Удаление исполняемых файлов задания N
+.PHONY: t% d%
+
 t%:
-	@mkdir -p $(PRACTIKA)
-	@for src in $(SRC4); do \
-		exe=$${src%.c}; \
-		echo "$(CC) $$src -o $$exe"; \
-		$(CC) $(PRACTIKA)/$$src -o $(PRACTIKA)/$$exe; \
-	done
+	$(MAKE) NUM=$* all
 
-# Удаление
 d%:
-	@for exe in $(EXE4); do \
-		rm -f $(PRACTIKA)/$$exe; \
-	done
-	@echo "Удаление исполняемых файлов прошло успешно"
+	$(MAKE) NUM=$* clean
+
+.PHONY: all clean
+
+all:
+	$(eval PRACTIKA=Practika$(NUM))
+	$(eval SRC=$(wildcard $(PRACTIKA)/*.c))
+	$(eval OBJ=$(SRC:.c=.o))
+	$(eval EXE=$(SRC:.c=))
+	@$(MAKE) -C $(PRACTIKA) $(notdir $(EXE))
+
+clean:
+	$(eval PRACTIKA=Practika$(NUM))
+	$(eval SRC=$(wildcard $(PRACTIKA)/*.c))
+	$(eval OBJ=$(SRC:.c=.o))
+	$(eval EXE=$(SRC:.c=))
+	@echo "Очистка в $(PRACTIKA)"
+	@rm -f $(OBJ) $(EXE)
+
