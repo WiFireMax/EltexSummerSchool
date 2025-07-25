@@ -10,6 +10,14 @@ $(PRACTIKA)/%: $(PRACTIKA)/%.o
 
 # Параметр t[N] - компиляция отдельного задания N
 # Параметр d[N] - Удаление исполняемых файлов задания N
+.PHONY: t5 d5
+
+t5:
+	$(MAKE) -C Practika5
+
+d5:
+	$(MAKE) -C Practika5 clean
+
 .PHONY: t% d%
 
 t%:

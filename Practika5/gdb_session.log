@@ -1,0 +1,57 @@
++break main
+Breakpoint 1 at 0x4011a2: file task2.c, line 9.
++run
+Starting program: /home/firemax/Eltex/Practika5/task2 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at task2.c:9
+9	    puts("Enter password:");
++disassemble main
+Dump of assembler code for function main:
+   0x0000000000401196 <+0>:	endbr64 
+   0x000000000040119a <+4>:	push   %rbp
+   0x000000000040119b <+5>:	mov    %rsp,%rbp
+   0x000000000040119e <+8>:	sub    $0x10,%rsp
+=> 0x00000000004011a2 <+12>:	lea    0xe5b(%rip),%rax        # 0x402004
+   0x00000000004011a9 <+19>:	mov    %rax,%rdi
+   0x00000000004011ac <+22>:	call   0x401070 <puts@plt>
+   0x00000000004011b1 <+27>:	call   0x4011ee <IsPassOk>
+   0x00000000004011b6 <+32>:	mov    %eax,-0x4(%rbp)
+   0x00000000004011b9 <+35>:	cmpl   $0x0,-0x4(%rbp)
+   0x00000000004011bd <+39>:	jne    0x4011d8 <main+66>
+   0x00000000004011bf <+41>:	lea    0xe4e(%rip),%rax        # 0x402014
+   0x00000000004011c6 <+48>:	mov    %rax,%rdi
+   0x00000000004011c9 <+51>:	call   0x401070 <puts@plt>
+   0x00000000004011ce <+56>:	mov    $0x1,%edi
+   0x00000000004011d3 <+61>:	call   0x4010a0 <exit@plt>
+   0x00000000004011d8 <+66>:	lea    0xe43(%rip),%rax        # 0x402022
+   0x00000000004011df <+73>:	mov    %rax,%rdi
+   0x00000000004011e2 <+76>:	call   0x401070 <puts@plt>
+   0x00000000004011e7 <+81>:	mov    $0x0,%eax
+   0x00000000004011ec <+86>:	leave  
+   0x00000000004011ed <+87>:	ret    
+End of assembler dump.
++break IsPassOk
+Breakpoint 2 at 0x4011fa: file task2.c, line 22.
++continue
+Continuing.
+
+Breakpoint 2, IsPassOk () at task2.c:22
+22	    gets(Pass);
++info frame
+Stack level 0, frame at 0x7fffffffe220:
+ rip = 0x4011fa in IsPassOk (task2.c:22); saved rip = 0x4011b6
+ called by frame at 0x7fffffffe240
+ source language c.
+ Arglist at 0x7fffffffe210, args: 
+ Locals at 0x7fffffffe210, Previous frame's sp is 0x7fffffffe220
+ Saved registers:
+  rbp at 0x7fffffffe210, rip at 0x7fffffffe218
++print &Pass
+$1 = (char (*)[12]) 0x7fffffffe204
++x/10x $rsp
+0x7fffffffe200:	0xffffe348	0x00007fff	0x00401196	0x00000000
+0x7fffffffe210:	0xffffe230	0x00007fff	0x004011b6	0x00000000
+0x7fffffffe220:	0x00000000	0x00000000
++exit
