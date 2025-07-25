@@ -13,7 +13,7 @@ int main()
         int choice;
         scanf("%d", &choice);
         int c;
-        while ((c = getchar()) != '\n' && c != EOF);
+        while (getchar() != '\n');
 
         switch (choice)
         {
