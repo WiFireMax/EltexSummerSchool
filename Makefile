@@ -24,6 +24,12 @@ t6:
 d6:
 	$(MAKE) -C Practika6 clean
 
+t7:
+	$(MAKE) -C Practika7
+
+d7:
+	$(MAKE) -C Practika7 clean
+
 .PHONY: t% d%
 
 t%:
