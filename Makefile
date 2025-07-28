@@ -10,7 +10,7 @@ $(PRACTIKA)/%: $(PRACTIKA)/%.o
 
 # Параметр t[N] - компиляция отдельного задания N
 # Параметр d[N] - Удаление исполняемых файлов задания N
-.PHONY: t5 d5 t6 d6 t7 d7 t8 d8
+.PHONY: t5 d5 t6 d6 t7 d7 t8 d8 d9
 
 t5:
 	$(MAKE) -C Practika5
@@ -35,7 +35,14 @@ t8:
 
 d8:
 	$(MAKE) -C Practika8 clean
-
+d9:
+	$(eval PRACTIKA=Practika9)
+	$(eval SRC=$(wildcard $(PRACTIKA)/*.c))
+	$(eval OBJ=$(SRC:.c=.o))
+	$(eval EXE=$(SRC:.c=))
+	@echo "Очистка в $(PRACTIKA)"
+	@rm -f $(OBJ) $(EXE)
+	@rm -f $(PRACTIKA)/output.txt
 
 .PHONY: t% d%
 

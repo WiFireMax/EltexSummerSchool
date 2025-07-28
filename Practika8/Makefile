@@ -23,7 +23,7 @@ $(OBJ_MAIN): $(SRC_MAIN) calculator.h
 	$(CC) -fPIC -I. -c $< -o $@
 
 $(TARGET): $(OBJ_MAIN) $(LIB)
-	$(CC) -o $@ $(OBJ_MAIN) -L. -lfiremaxlib
+	$(CC) -o $@ $(OBJ_MAIN) -L. -lfiremaxlib -Wl,-rpath,.
 
 clean:
 	rm -f $(OBJ_LIB) $(OBJ_MAIN) $(LIB) $(TARGET)
