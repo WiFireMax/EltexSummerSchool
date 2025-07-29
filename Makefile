@@ -35,14 +35,17 @@ t8:
 
 d8:
 	$(MAKE) -C Practika8 clean
+t9:
+	$(CC) Practika9/task1.c -o Practika9/task1
+	$(CC) -o Practika9/file_manager Practika9/task2.c -lncurses
 d9:
 	$(eval PRACTIKA=Practika9)
 	$(eval SRC=$(wildcard $(PRACTIKA)/*.c))
 	$(eval OBJ=$(SRC:.c=.o))
 	$(eval EXE=$(SRC:.c=))
 	@echo "Очистка в $(PRACTIKA)"
-	@rm -f $(OBJ) $(EXE)
-	@rm -f $(PRACTIKA)/output.txt
+	rm -f $(OBJ) $(EXE)
+	rm -f $(PRACTIKA)/output.txt $(PRACTIKA)/file_manager
 
 .PHONY: t% d%
 
