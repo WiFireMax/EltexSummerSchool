@@ -70,5 +70,5 @@ clean:
 	$(eval OBJ=$(SRC:.c=.o))
 	$(eval EXE=$(SRC:.c=))
 	@echo "Очистка в $(PRACTIKA)"
-	@rm -f $(OBJ) $(EXE)
+	rm -f $(OBJ) $(EXE)
 
