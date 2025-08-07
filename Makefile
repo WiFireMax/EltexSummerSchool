@@ -10,7 +10,7 @@ $(PRACTIKA)/%: $(PRACTIKA)/%.o
 
 # Параметр t[N] - компиляция отдельного задания N
 # Параметр d[N] - Удаление исполняемых файлов задания N
-.PHONY: t5 d5 t6 d6 t7 d7 t8 d8 d9 t11 d11
+.PHONY: t5 d5 t6 d6 t7 d7 t8 d8 d9 t11 d11 t13
 
 t5:
 	$(MAKE) -C Practika5
@@ -49,6 +49,12 @@ t11:
 d11:
 	rm -f Practika11/life.log
 	$(MAKE) NUM=11 clean
+t13:
+	$(CC) Practika13/task1_posix_server.c -o Practika13/task1_posix_server -lrt
+	$(CC) Practika13/task1_posix_client.c -o Practika13/task1_posix_client -lrt
+	$(CC) Practika13/task2_server.c -o Practika13/task2_server -lpthread -lncurses
+	$(CC) Practika13/task2_client.c -o Practika13/task2_client -lpthread -lncurses
+	$(MAKE) NUM=13 all
 
 .PHONY: t% d%
 
