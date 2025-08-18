@@ -14,27 +14,24 @@ $(PRACTIKA)/%: $(PRACTIKA)/%.o
 
 t5:
 	$(MAKE) -C Practika5
-
 d5:
 	$(MAKE) -C Practika5 clean
 
 t6:
 	$(MAKE) -C Practika6
-
 d6:
 	$(MAKE) -C Practika6 clean
 
 t7:
 	$(MAKE) -C Practika7
-
 d7:
 	$(MAKE) -C Practika7 clean
 
 t8:
 	$(MAKE) -C Practika8
-
 d8:
 	$(MAKE) -C Practika8 clean
+
 t9:
 	$(CC) Practika9/task1.c -o Practika9/task1
 	$(CC) -o Practika9/file_manager Practika9/task2.c -lncurses
@@ -49,22 +46,27 @@ t11:
 d11:
 	rm -f Practika11/life.log
 	$(MAKE) NUM=11 clean
+
 t13:
 	$(CC) Practika13/task1_posix_server.c -o Practika13/task1_posix_server -lrt
 	$(CC) Practika13/task1_posix_client.c -o Practika13/task1_posix_client -lrt
 	$(CC) Practika13/task2_server.c -o Practika13/task2_server -lpthread -lncurses
 	$(CC) Practika13/task2_client.c -o Practika13/task2_client -lpthread -lncurses
 	$(MAKE) NUM=13 all
+
 t14:
 	$(CC) Practika14/task1_posixshm_server.c -o Practika14/task1_posixshm_server -lpthread -lrt
 	$(CC) Practika14/task1_posixshm_client.c -o Practika14/task1_posixshm_client -lpthread -lrt
 	$(CC) Practika14/task2_server.c -o Practika14/task2_server -lrt -lpthread -lncurses
 	$(CC) Practika14/task2_client.c -o Practika14/task2_client -lrt -lpthread -lncurses
 	$(MAKE) NUM=14 all
+
 t16:
 	$(MAKE) NUM=16/task1 all
+	$(MAKE) NUM=16/task3 all
 d16:
 	$(MAKE) NUM=16/task1 clean
+	$(MAKE) NUM=16/task3 clean
 
 .PHONY: t% d%
 
