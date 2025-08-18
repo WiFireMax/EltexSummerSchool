@@ -9,13 +9,15 @@
 #define MCAST_GROUP "239.0.0.1"
 #define MAXLINE 1024
 
-int main() {
+int main()
+{
     int sockfd;
     struct sockaddr_in local_addr;
     struct ip_mreq mreq;
     char buffer[MAXLINE];
 
-    if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
+    if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
+    {
         perror("socket creation failed");
         exit(EXIT_FAILURE);
     }
@@ -25,17 +27,17 @@ int main() {
     local_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     local_addr.sin_port = htons(PORT);
 
-    if (bind(sockfd, (struct sockaddr *)&local_addr, sizeof(local_addr)) < 0) {
+    if (bind(sockfd, (struct sockaddr *)&local_addr, sizeof(local_addr)) < 0)
+    {
         perror("bind failed");
         close(sockfd);
         exit(EXIT_FAILURE);
     }
 
-    // Подписываемся на multicast группу
     mreq.imr_multiaddr.s_addr = inet_addr(MCAST_GROUP);
     mreq.imr_interface.s_addr = htonl(INADDR_ANY);
-    if (setsockopt(sockfd, IPPROTO_IP, IP_ADD_MEMBERSHIP,
-                   &mreq, sizeof(mreq)) < 0) {
+    if (setsockopt(sockfd, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq)) < 0)
+    {
         perror("setsockopt IP_ADD_MEMBERSHIP failed");
         close(sockfd);
         exit(EXIT_FAILURE);
@@ -43,9 +45,11 @@ int main() {
 
     printf("Multicast server listening on group %s port %d\n", MCAST_GROUP, PORT);
 
-    while (1) {
+    while (1)
+    {
         ssize_t n = recv(sockfd, buffer, MAXLINE, 0);
-        if (n < 0) {
+        if (n < 0)
+        {
             perror("recv failed");
             continue;
         }

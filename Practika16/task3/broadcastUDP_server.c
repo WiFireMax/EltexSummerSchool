@@ -7,13 +7,15 @@
 #define PORT 5000
 #define MAXLINE 1024
 
-int main() {
+int main()
+{
     int sockfd;
     char buffer[MAXLINE];
     struct sockaddr_in servaddr, cliaddr;
     socklen_t len = sizeof(cliaddr);
 
-    if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
+    if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
+    {
         perror("socket creation failed");
         exit(EXIT_FAILURE);
     }
@@ -23,7 +25,8 @@ int main() {
     servaddr.sin_addr.s_addr = INADDR_ANY;
     servaddr.sin_port = htons(PORT);
 
-    if (bind(sockfd, (const struct sockaddr *)&servaddr, sizeof(servaddr)) < 0) {
+    if (bind(sockfd, (const struct sockaddr *)&servaddr, sizeof(servaddr)) < 0)
+    {
         perror("bind failed");
         close(sockfd);
         exit(EXIT_FAILURE);
@@ -31,7 +34,8 @@ int main() {
 
     printf("Broadcast server listening on port %d\n", PORT);
 
-    while (1) {
+    while (1)
+    {
         ssize_t n = recvfrom(sockfd, buffer, MAXLINE, 0, (struct sockaddr *)&cliaddr, &len);
         if (n < 0) {
             perror("recvfrom failed");
