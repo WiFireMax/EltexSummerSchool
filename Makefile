@@ -63,9 +63,14 @@ t14:
 
 t16:
 	$(MAKE) NUM=16/task1 all
+	$(CC) -pthread -o Practika16/task2/thread_per_client_server Practika16/task2/thread_per_client_server.c
+	$(CC) -pthread -o Practika16/task2/thread_pool_server Practika16/task2/thread_pool_server.c
+	$(CC) -pthread -o Practika16/task2/producer_consumer_server Practika16/task2/producer_consumer_server.c
+	$(MAKE) NUM=16/task2 all
 	$(MAKE) NUM=16/task3 all
 d16:
 	$(MAKE) NUM=16/task1 clean
+	$(MAKE) NUM=16/task2 clean
 	$(MAKE) NUM=16/task3 clean
 
 .PHONY: t% d%
