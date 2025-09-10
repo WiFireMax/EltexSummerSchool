@@ -68,10 +68,12 @@ t16:
 	$(CC) -pthread -o Practika16/task2/producer_consumer_server Practika16/task2/producer_consumer_server.c
 	$(MAKE) NUM=16/task2 all
 	$(MAKE) NUM=16/task3 all
+	$(MAKE) NUM=16/rawsockets all
 d16:
 	$(MAKE) NUM=16/task1 clean
 	$(MAKE) NUM=16/task2 clean
 	$(MAKE) NUM=16/task3 clean
+	$(MAKE) NUM=16/rawsockets clean
 
 .PHONY: t% d%
 
