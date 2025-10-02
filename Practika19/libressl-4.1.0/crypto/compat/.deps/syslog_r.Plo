@@ -1,0 +1,34 @@
+compat/syslog_r.lo: compat/syslog_r.c \
+ /usr/arm-linux-gnueabihf/include/stdc-predef.h \
+ ../include/compat/syslog.h /usr/arm-linux-gnueabihf/include/syslog.h \
+ /usr/arm-linux-gnueabihf/include/sys/syslog.h \
+ /usr/arm-linux-gnueabihf/include/features.h \
+ /usr/arm-linux-gnueabihf/include/features-time64.h \
+ /usr/arm-linux-gnueabihf/include/bits/wordsize.h \
+ /usr/arm-linux-gnueabihf/include/bits/timesize.h \
+ /usr/arm-linux-gnueabihf/include/sys/cdefs.h \
+ /usr/arm-linux-gnueabihf/include/bits/long-double.h \
+ /usr/arm-linux-gnueabihf/include/gnu/stubs.h \
+ /usr/arm-linux-gnueabihf/include/gnu/stubs-hard.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/11/include/stdarg.h \
+ /usr/arm-linux-gnueabihf/include/bits/syslog-path.h \
+ /usr/arm-linux-gnueabihf/include/bits/syslog.h \
+ /usr/arm-linux-gnueabihf/include/bits/floatn.h \
+ /usr/arm-linux-gnueabihf/include/bits/floatn-common.h
+/usr/arm-linux-gnueabihf/include/stdc-predef.h:
+../include/compat/syslog.h:
+/usr/arm-linux-gnueabihf/include/syslog.h:
+/usr/arm-linux-gnueabihf/include/sys/syslog.h:
+/usr/arm-linux-gnueabihf/include/features.h:
+/usr/arm-linux-gnueabihf/include/features-time64.h:
+/usr/arm-linux-gnueabihf/include/bits/wordsize.h:
+/usr/arm-linux-gnueabihf/include/bits/timesize.h:
+/usr/arm-linux-gnueabihf/include/sys/cdefs.h:
+/usr/arm-linux-gnueabihf/include/bits/long-double.h:
+/usr/arm-linux-gnueabihf/include/gnu/stubs.h:
+/usr/arm-linux-gnueabihf/include/gnu/stubs-hard.h:
+/usr/lib/gcc-cross/arm-linux-gnueabihf/11/include/stdarg.h:
+/usr/arm-linux-gnueabihf/include/bits/syslog-path.h:
+/usr/arm-linux-gnueabihf/include/bits/syslog.h:
+/usr/arm-linux-gnueabihf/include/bits/floatn.h:
+/usr/arm-linux-gnueabihf/include/bits/floatn-common.h:

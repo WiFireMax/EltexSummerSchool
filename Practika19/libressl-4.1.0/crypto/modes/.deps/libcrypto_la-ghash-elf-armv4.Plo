@@ -1,0 +1,4 @@
+modes/libcrypto_la-ghash-elf-armv4.lo: modes/ghash-elf-armv4.S \
+ /usr/arm-linux-gnueabihf/include/stdc-predef.h arm_arch.h
+/usr/arm-linux-gnueabihf/include/stdc-predef.h:
+arm_arch.h:
