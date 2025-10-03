@@ -18,23 +18,23 @@ our @EXPORT = qw(
     $VERSION @LDLIBS
 );
 
-our @PREFIX                     = ( '/usr/local' );
-our @libdir                     = ( '/usr/local/lib' );
-our @BINDIR                     = ( '/usr/local/bin' );
+our @PREFIX                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install' );
+our @libdir                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/lib' );
+our @BINDIR                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/bin' );
 our @BINDIR_REL_PREFIX          = ( 'bin' );
-our @LIBDIR                     = ( '/usr/local/lib' );
+our @LIBDIR                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/lib' );
 our @LIBDIR_REL_PREFIX          = ( 'lib' );
-our @INCLUDEDIR                 = ( '/usr/local/include' );
+our @INCLUDEDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/include' );
 our @INCLUDEDIR_REL_PREFIX      = ( 'include' );
-our @APPLINKDIR                 = ( '/usr/local/include/openssl' );
+our @APPLINKDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/include/openssl' );
 our @APPLINKDIR_REL_PREFIX      = ( 'include/openssl' );
-our @ENGINESDIR                 = ( '/usr/local/lib/engines-3' );
+our @ENGINESDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/lib/engines-3' );
 our @ENGINESDIR_REL_LIBDIR      = ( 'engines-3' );
-our @MODULESDIR                 = ( '/usr/local/lib/ossl-modules' );
+our @MODULESDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/lib/ossl-modules' );
 our @MODULESDIR_REL_LIBDIR      = ( 'ossl-modules' );
-our @PKGCONFIGDIR               = ( '/usr/local/lib/pkgconfig' );
+our @PKGCONFIGDIR               = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/lib/pkgconfig' );
 our @PKGCONFIGDIR_REL_LIBDIR    = ( 'pkgconfig' );
-our @CMAKECONFIGDIR             = ( '/usr/local/lib/cmake/OpenSSL' );
+our @CMAKECONFIGDIR             = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install/lib/cmake/OpenSSL' );
 our @CMAKECONFIGDIR_REL_LIBDIR  = ( 'cmake/OpenSSL' );
 our $VERSION                    = '3.5.3';
 our @LDLIBS                     =

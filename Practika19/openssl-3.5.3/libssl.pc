@@ -1,4 +1,4 @@
-prefix=/home/firemax/Eltex/Practika19/openssl-3.5.3
+prefix=/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3
 exec_prefix=${prefix}
 libdir=${exec_prefix}
 includedir=${prefix}/include ${prefix}/./include 

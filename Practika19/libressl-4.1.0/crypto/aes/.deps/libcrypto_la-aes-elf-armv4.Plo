@@ -1,4 +1,0 @@
-aes/libcrypto_la-aes-elf-armv4.lo: aes/aes-elf-armv4.S \
- /usr/arm-linux-gnueabihf/include/stdc-predef.h arm_arch.h
-/usr/arm-linux-gnueabihf/include/stdc-predef.h:
-arm_arch.h:

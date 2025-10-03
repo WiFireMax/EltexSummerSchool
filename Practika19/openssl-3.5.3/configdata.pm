@@ -240,13 +240,14 @@ our %config = (
     ],
     "openssl_sys_defines" => [],
     "openssldir" => "",
-    "options" => " no-acvp-tests no-asan no-brotli no-brotli-dynamic no-buildtest-c++ no-crypto-mdebug no-crypto-mdebug-backtrace no-demos no-devcryptoeng no-ec_nistp_64_gcc_128 no-egd no-external-tests no-fips no-fips-jitter no-fips-post no-fips-securitychecks no-fuzz-afl no-fuzz-libfuzzer no-h3demo no-hqinterop no-jitter no-ktls no-md2 no-msan no-pie no-rc5 no-sctp no-ssl3 no-ssl3-method no-sslkeylog no-tfo no-trace no-ubsan no-unit-test no-uplink no-weak-ssl-ciphers no-winstore no-zlib no-zlib-dynamic no-zstd no-zstd-dynamic",
+    "options" => "--prefix=/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install no-acvp-tests no-asan no-brotli no-brotli-dynamic no-buildtest-c++ no-crypto-mdebug no-crypto-mdebug-backtrace no-demos no-devcryptoeng no-ec_nistp_64_gcc_128 no-egd no-external-tests no-fips no-fips-jitter no-fips-post no-fips-securitychecks no-fuzz-afl no-fuzz-libfuzzer no-h3demo no-hqinterop no-jitter no-ktls no-md2 no-msan no-pie no-rc5 no-sctp no-ssl3 no-ssl3-method no-sslkeylog no-tfo no-trace no-ubsan no-unit-test no-uplink no-weak-ssl-ciphers no-winstore no-zlib no-zlib-dynamic no-zstd no-zstd-dynamic",
     "patch" => "3",
     "perl_archname" => "x86_64-linux-gnu-thread-multi",
     "perl_cmd" => "/usr/bin/perl",
     "perl_version" => "5.34.0",
     "perlargv" => [
-        "linux-armv4"
+        "linux-armv4",
+        "--prefix=/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install"
     ],
     "perlenv" => {
         "AR" => undef,
@@ -285,7 +286,7 @@ our %config = (
         "__CNF_LDFLAGS" => undef,
         "__CNF_LDLIBS" => undef
     },
-    "prefix" => "",
+    "prefix" => "/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/_install",
     "prerelease" => "",
     "processor" => "",
     "rc4_int" => "unsigned char",
@@ -36180,8 +36181,8 @@ unless (caller) {
     use File::Copy;
     use Pod::Usage;
 
-    use lib '/home/firemax/Eltex/Practika19/openssl-3.5.3/util/perl';
-    use OpenSSL::fallback '/home/firemax/Eltex/Practika19/openssl-3.5.3/external/perl/MODULES.txt';
+    use lib '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/util/perl';
+    use OpenSSL::fallback '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/external/perl/MODULES.txt';
 
     my $here = dirname($0);
 
@@ -36208,7 +36209,7 @@ unless (caller) {
             );
 
         use lib '.';
-        use lib '/home/firemax/Eltex/Practika19/openssl-3.5.3/Configurations';
+        use lib '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/Configurations';
         use gentemplate;
 
         open my $buildfile_template_fh, ">$buildfile_template"
@@ -36225,8 +36226,8 @@ unless (caller) {
 
         my $prepend = <<'_____';
 use File::Spec::Functions;
-use lib '/home/firemax/Eltex/Practika19/openssl-3.5.3/util/perl';
-use lib '/home/firemax/Eltex/Practika19/openssl-3.5.3/Configurations';
+use lib '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/util/perl';
+use lib '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/Configurations';
 use lib '.';
 use platform;
 _____

@@ -18,23 +18,23 @@ our @EXPORT = qw(
     $VERSION @LDLIBS
 );
 
-our @PREFIX                     = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3' );
-our @libdir                     = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3' );
-our @BINDIR                     = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3/apps' );
+our @PREFIX                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3' );
+our @libdir                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3' );
+our @BINDIR                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/apps' );
 our @BINDIR_REL_PREFIX          = ( 'apps' );
-our @LIBDIR                     = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3' );
+our @LIBDIR                     = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3' );
 our @LIBDIR_REL_PREFIX          = ( '' );
-our @INCLUDEDIR                 = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3/include', '/home/firemax/Eltex/Practika19/openssl-3.5.3/include' );
+our @INCLUDEDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/include', '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/include' );
 our @INCLUDEDIR_REL_PREFIX      = ( 'include', './include' );
-our @APPLINKDIR                 = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3/ms' );
+our @APPLINKDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/ms' );
 our @APPLINKDIR_REL_PREFIX      = ( 'ms' );
-our @ENGINESDIR                 = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3/engines' );
+our @ENGINESDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/engines' );
 our @ENGINESDIR_REL_LIBDIR      = ( 'engines' );
-our @MODULESDIR                 = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3/providers' );
+our @MODULESDIR                 = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3/providers' );
 our @MODULESDIR_REL_LIBDIR      = ( 'providers' );
-our @PKGCONFIGDIR               = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3' );
+our @PKGCONFIGDIR               = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3' );
 our @PKGCONFIGDIR_REL_LIBDIR    = ( '.' );
-our @CMAKECONFIGDIR             = ( '/home/firemax/Eltex/Practika19/openssl-3.5.3' );
+our @CMAKECONFIGDIR             = ( '/home/firemax/Eltex/EltexSummerSchool/Practika19/openssl-3.5.3' );
 our @CMAKECONFIGDIR_REL_LIBDIR  = ( '.' );
 our $VERSION                    = '3.5.3';
 our @LDLIBS                     =

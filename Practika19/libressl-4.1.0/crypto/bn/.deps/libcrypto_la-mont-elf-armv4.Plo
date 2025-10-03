@@ -1,3 +1,0 @@
-bn/libcrypto_la-mont-elf-armv4.lo: bn/mont-elf-armv4.S \
- /usr/arm-linux-gnueabihf/include/stdc-predef.h
-/usr/arm-linux-gnueabihf/include/stdc-predef.h:
